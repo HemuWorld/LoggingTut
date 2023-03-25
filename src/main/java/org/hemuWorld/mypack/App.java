@@ -1,6 +1,7 @@
 package org.hemuWorld.mypack;
 
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,5 +17,8 @@ public class App {
         log.warn("Warning App");
         log.error("Error App");
         log.fatal("Fatal App");
+        log.log(Level.getLevel("DIAG"), "DIAG");
+        log.log(Level.getLevel("NOTICE"), "NOTICE");
+        log.log(Level.getLevel("VERBOSE"), "VERBOSE");
     }
 }

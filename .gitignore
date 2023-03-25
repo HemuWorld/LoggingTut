@@ -40,3 +40,4 @@ build/
 
 ### Log File ###
 app.log
+.logs/
