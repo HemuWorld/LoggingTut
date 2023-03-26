@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="WARN" monitorInterval="30">
     <!-- Define custom levels -->
     <CustomLevels>
         <CustomLevel name="DIAG" intLevel="350"/>
@@ -13,29 +13,15 @@
     </Properties>
     <!--            Appender            -->
     <Appenders>
-        <!--            Console            -->
         <Console name="Console" target="SYSTEM_OUT">
+            <!--            Pattern Layout            -->
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <!--            File            -->
-        <File name="File" fileName="logs/app.log">
-            <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-            </PatternLayout>
-        </File>
-        <!--            RandomAccessFile            -->
-        <RandomAccessFile name="RandomAccessFile" fileName="logs/randomAccessFileApp.log" bufferedIO="true">
-            <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-            </PatternLayout>
-        </RandomAccessFile>
     </Appenders>
     <!--            Logger            -->
     <Loggers>
         <Root level="trace">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="File"/>
-            <AppenderRef ref="RandomAccessFile"/>
         </Root>
     </Loggers>
 </Configuration>
