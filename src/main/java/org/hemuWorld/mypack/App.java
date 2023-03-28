@@ -9,16 +9,16 @@ import org.apache.logging.log4j.Logger;
  * Hello world!
  */
 public class App {
-    private static final Logger log = LogManager.getLogger(App.class.getName());
+    public static final Logger logger = LogManager.getLogger(App.class.getName());
 
     public static void main(String[] args) {
-        log.debug("Debug App");
-        log.info("Info App");
-        log.warn("Warning App");
-        log.error("Error App");
-        log.fatal("Fatal App");
-        log.log(Level.getLevel("DIAG"), "DIAG");
-        log.log(Level.getLevel("NOTICE"), "NOTICE");
-        log.log(Level.getLevel("VERBOSE"), "VERBOSE");
+        logger.debug("Debug App");
+        logger.info("Info App");
+        logger.warn("Warning App");
+        logger.error("Error App");
+        logger.fatal("Fatal App");
+        logger.log(Level.getLevel("DIAG"), "DIAG");
+        logger.log(Level.getLevel("NOTICE"), "NOTICE");
+        logger.log(Level.getLevel("VERBOSE"), "VERBOSE");
     }
 }
